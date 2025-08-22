@@ -21,7 +21,7 @@ export default function Home() {
         Software Engineer (React, React Native, TypeScript, Next.js)
       </h5> */}
       <p className="font-light text-sm w-full max-w-[700px]">
-        I'm a Software Engineer, with 5+ years of experience in building
+        I&apos;m a Software Engineer, with 5+ years of experience in building
         applications, primarily using React Native and TypeScript/JavaScript. I
         have worked on, and deployed, more than ten applications to both the
         Apple App Store and Google Play Store, serving more than a hundred
