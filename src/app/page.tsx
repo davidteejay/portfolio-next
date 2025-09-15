@@ -1,5 +1,8 @@
+import { Github, Linkedin, Mail } from "@geist-ui/icons";
 import Image from "next/image";
-import { Linkedin, Mail, Github, Twitter } from "@geist-ui/icons";
+import { FaMedium, FaStackOverflow, FaXTwitter } from "react-icons/fa6";
+
+const iconSize = 24;
 
 export default function Home() {
   return (
@@ -21,7 +24,7 @@ export default function Home() {
         Software Engineer (React, React Native, TypeScript, Next.js)
       </h5> */}
       <p className="font-light text-sm w-full max-w-[700px]">
-        I&apos;m a Software Engineer, with 5+ years of experience in building
+        I&apos;m a Software Engineer, with extensive experience in building
         applications, primarily using React Native and TypeScript/JavaScript. I
         have worked on, and deployed, more than ten applications to both the
         Apple App Store and Google Play Store, serving more than a hundred
@@ -33,28 +36,42 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Mail />
+          <Mail size={iconSize} />
         </a>
         <a
           href="https://linkedin.com/in/chibuokem-onyekwelu"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Linkedin />
+          <Linkedin size={iconSize} />
         </a>
         <a
           href="https://github.com/davidteejay"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Github />
+          <Github size={iconSize} />
         </a>
         <a
           href="https://x.com/lord_chii"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Twitter />
+          <FaXTwitter size={iconSize} />
+        </a>
+        <a
+          href="https://medium.com/@chibuokem"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaMedium size={iconSize} />
+        </a>
+        <a
+          href="https://stackoverflow.com/users/10407415/chibuokem-onyekwelu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaStackOverflow size={iconSize} />
         </a>
       </div>
     </div>
