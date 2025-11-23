@@ -1,16 +1,17 @@
-import { Github, Linkedin, Mail } from "@geist-ui/icons";
 import Image from "next/image";
+import { Github, Linkedin, Mail } from "@geist-ui/icons";
 import { FaMedium, FaStackOverflow, FaXTwitter } from "react-icons/fa6";
+import { ADPListIcon } from "@/assets/icons/ADPList";
 
 const iconSize = 24;
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center h-full w-full p-6 bg-background">
+    <div className="main-container flex flex-1 flex-col items-center justify-center h-full w-full p-6 bg-background">
       <div className="w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] border border-gray-100 dark:border-gray-700 rounded-full overflow-hidden p-2">
         <div className="w-full h-full relative">
           <Image
-            src="/headshot.jpeg"
+            src={"/images/headshot.jpeg"}
             alt="Headshot of Chii"
             fill
             className="rounded-full"
@@ -24,7 +25,7 @@ export default function Home() {
         Software Engineer (React, React Native, TypeScript, Next.js)
       </h5> */}
       <p className="font-light text-sm w-full max-w-[700px]">
-        I&apos;m a Software Engineer, with extensive experience in building
+        I&apos;m a Software Engineer, with 6+ years of experience in building
         applications, primarily using React Native and TypeScript/JavaScript. I
         have worked on, and deployed, more than ten applications to both the
         Apple App Store and Google Play Store, serving more than a hundred
@@ -51,6 +52,13 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <Github size={iconSize} />
+        </a>
+        <a
+          href="https://adplist.org/mentors/chibuokem-onyekwelu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ADPListIcon size={iconSize} />
         </a>
         <a
           href="https://x.com/lord_chii"
