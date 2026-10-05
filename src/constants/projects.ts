@@ -2,7 +2,11 @@ type Project = {
   id: string;
   name: string;
   description: string;
+  role: string;
+  outcome?: string;
   year: string;
+  linksNote?: string;
+  caseStudy?: { order: number };
   links?: { label: string; url: string }[];
   technologies: string[];
 };
@@ -12,8 +16,12 @@ export const projects: Project[] = [
     id: "irish-times-news",
     name: "The Irish Times News",
     description:
-      "A mobile application for The Irish Times newspaper. I implemented release automation using Fastlane and Bitbucket Pipelines, streamlining the deployment process to Firebase App Distribution for testing, and both the Apple App Store and Google Play Store. I worked on adding Expo to the app, and upgrading the app and all it's dependencies to the latest versions.",
-    year: "2025 - present",
+      "Modernized The Irish Times News app by introducing Expo and upgrading its dependencies. Automated testing and store releases with Fastlane and Bitbucket Pipelines.",
+    role: "Senior Full-stack Engineer · Square1; Software Engineer · The Irish Times",
+    outcome:
+      "Improved launch performance by 50% and reduced technical debt by 60% on an app serving 120,000+ users.",
+    year: "Oct 2025 – Present",
+    caseStudy: { order: 2 },
     links: [
       {
         label: "App Store",
@@ -42,8 +50,12 @@ export const projects: Project[] = [
     id: "female-invest",
     name: "Female Invest",
     description:
-      "Female Invest aims to close the gender gap in finance and investing by providing financial education, resources, and a supportive community for women. As a Senior React Native Engineer, I led the development of the mobile application using React Native and TypeScript. I collaborated closely with designers and product managers to create an intuitive and user-friendly interface, implemented key features such as user authentication, in app subscriptions, the learning flows and modules, the community, podcasts, referrals and the trading simulator. I also implemented CI/CD pipelines using Microsoft App Center, and integrated bug and crash reporting using Firebase Crashlytics and App Center Crashes. Additionally, I worked on optimizing app performance and ensuring a smooth user experience across both iOS and Android platforms, implementing user feedback collection using Instabug, A/B testing and feature flags to experiment with new features and improve user engagement using DevCycle, and internationalization (i18n) to support English and Danish.",
-    year: "2022 - 2025",
+      "Led core mobile journeys for a financial education and investing platform for women. Shipped onboarding, subscriptions, learning modules, community, podcasts, referrals, and a trading simulator with product and design partners.",
+    role: "Senior React Native Engineer · Female Invest",
+    outcome:
+      "Increased monthly active users by 46% through experimentation and product improvements, and reduced deployment time by 25%.",
+    year: "May 2022 – Feb 2025",
+    caseStudy: { order: 1 },
     links: [
       {
         label: "App Store",
@@ -72,8 +84,10 @@ export const projects: Project[] = [
     id: "ashia",
     name: "Ashia",
     description:
-      "A mobile application that helps users keep track of their wellbeing, by setting a blood pressure measurement schedule, reminders, and tracking their measurements over time. I worked on building the app using React Native and TypeScript, implementing features such as user authentication, measurement scheduling and reminders, data visualization, sharing data with family and caregivers, and integration with Apple HealthKit and Google Fit to sync health data. I also set up CI/CD pipelines using GitHub Actions and EAS for automated testing and deployment to both the Apple App Store and Google Play Store. I implemented Bluetooth LE connectivity to connect with compatible blood pressure monitors for automatic data syncing using Native Modules (Kotlin and Swift), and internationalization (i18n) to support English and Arabic.",
-    year: "2024 - 2025",
+      "Built a blood pressure tracking app with measurement schedules, reminders, health data syncing, and sharing for family and caregivers. Added Bluetooth monitor support through native iOS and Android modules, plus English and Arabic localization.",
+    role: "React Native Engineer",
+    year: "2024 – 2025",
+    caseStudy: { order: 5 },
     links: [
       {
         label: "App Store",
@@ -105,8 +119,13 @@ export const projects: Project[] = [
     id: "earna",
     name: "Earna",
     description:
-      "A mobile application that enables users to send and receive money globally and create cards to transact online. I led the migration of the app from Flutter to React Native, redesigning the app along the way. I led the implementation of all the features, including authentication (with biometric support), account management, money transfers, card creation, and transaction history, with Test Driven Development. I also set up the CI/CD pipelines using EAS Workflows for automated testing and deployment to both the Apple App Store and Google Play Store, and E2E testing using Maestro.",
-    year: "2025",
+      "Led the migration of a money transfer and virtual card app from Flutter to React Native, including a redesign, biometric sign-in, account management, transfers, and transaction history. Added automated unit, component, and end-to-end testing and release workflows.",
+    role: "Senior Product Engineer · Earna",
+    outcome:
+      "Improved app performance by over 50%, brought crash-free sessions close to 100%, and achieved over 90% test coverage for critical financial functionality.",
+    year: "Jul 2025 – Oct 2025",
+    linksNote: "Public store links are not listed for this project.",
+    caseStudy: { order: 4 },
     technologies: [
       "React Native",
       "TypeScript",
@@ -126,8 +145,12 @@ export const projects: Project[] = [
     id: "facility-bills",
     name: "Facility Bills",
     description:
-      "A mobile ERP application that streamlines core facility management processes and integrates utilities and bill payments. I built the app from scratch using React Native and Javascript, implementing features such as authetication, bill payments, wallets, and visitor management. I eventually worked on migrating the app to TypeScript for better type safety and maintainability, and worked alongside another developer to add new features and implement a rebrand of the app. I also set up CI/CD pipelines using GitHub Actions and EAS for automated testing and deployment to both the Apple App Store and Google Play Store, and implemented Firebase Crashlytics for error monitoring and reporting.",
-    year: "2022, 2025",
+      "Built and later modernized a facility management app for payments, wallets, and visitor management. Migrated the JavaScript codebase to TypeScript and set up automated builds, store releases, and crash reporting.",
+    role: "Technical Lead / Lead Mobile Software Engineer · FacilityBills Technologies",
+    outcome:
+      "Owned mobile delivery and maintained a 99% crash-free experience while improving type safety and release automation.",
+    year: "2022; Mar 2025 – present",
+    caseStudy: { order: 3 },
     links: [
       {
         label: "App Store",
@@ -154,8 +177,11 @@ export const projects: Project[] = [
     id: "korensi",
     name: "Korensi",
     year: "2022",
+    role: "Lead Mobile Software Engineer · Prunedge",
     description:
-      "A mobile application that enables users to create a dedicated virtual wallet to be used for paying for public transportation services. It was built alongside an app for bus drivers, with React Native, JavaScript, and Expo. On this project, I collaborated closely with other developers, designers, and product managers to deliver a seamless user experience. I implemented key features such as user authentication, wallet creation, transaction history, and top-ups using various payment methods. I also implemented tap-and-go payments using NFC technology, allowing users to make quick and secure payments by simply tapping their phones on compatible readers, and on the drivers app, terminal onboarding to link payment terminals to the app. I also managed deployment to both the Apple App Store and Google Play Store.",
+      "Built customer and driver apps for public transport payments, including wallet creation, top-ups, transaction history, and NFC tap-and-go payments.",
+    outcome:
+      "Supported real-time payment and transportation services for thousands of daily users in Lagos.",
     technologies: ["React Native", "JavaScript", "Expo", "React Query", "NFC"],
     links: [
       {
@@ -168,8 +194,9 @@ export const projects: Project[] = [
     id: "booosta",
     name: "Booosta",
     year: "2022",
+    role: "Lead Mobile Software Engineer · Prunedge",
     description:
-      "A mobile application for small and local businesses to manage their sales, inventory, inflow and customers. I worked on building the app, along with the Boosta Agent app using React Native, JavaScript, and Expo, implementing features such as product management, sales tracking, invoicing, customer management, and reporting.",
+      "Built the Booosta and Booosta Agent apps for small businesses to manage products, sales, invoices, customers, and reporting.",
     technologies: ["React Native", "JavaScript", "Expo", "React Query"],
     links: [
       {
@@ -186,8 +213,10 @@ export const projects: Project[] = [
     id: "delta-lms",
     name: "Delta State LMS",
     year: "2021",
+    role: "Mobile Software Engineer · Prunedge",
     description:
-      "A mobile learning management system (LMS) for students and teachers in Delta State, Nigeria. I worked on building the app using React Native, JavaScript, and Expo, implementing features such as course management, assignments, quizzes, grades, reporting and analytics, forums, progress tracking, e-library and communication between students and teachers. I also managed deployment to both the Apple App Store and Google Play Store.",
+      "Built an iOS and Android learning app for students and teachers in Delta State, with courses, assignments, quizzes, grades, forums, progress tracking, and an e-library.",
+    outcome: "Expanded access to digital education for thousands of students.",
     technologies: ["React Native", "JavaScript", "Expo", "Video Streaming"],
     links: [
       {
@@ -204,8 +233,9 @@ export const projects: Project[] = [
     id: "polleasy",
     name: "PollEasy",
     year: "2021",
+    role: "Mobile Software Engineer · Prunedge",
     description:
-      "A mobile application that provides solutions for election monitoring, surveys and opinion polls, and political campaigning for political parties and candidates. I worked on building the app using React Native, JavaScript, and Expo, implementing features such as real-time data collection and reporting, offline data collection, polling and surveys, and incidence reporting. I also managed deployment to both the Apple App Store and Google Play Store.",
+      "Built an election monitoring and polling app with online and offline data collection, surveys, real-time reporting, and incident reporting.",
     technologies: ["React Native", "JavaScript", "Expo"],
     links: [
       {
@@ -222,23 +252,34 @@ export const projects: Project[] = [
     id: "prowoks-edms",
     name: "Prowoks EDMS",
     year: "2021",
+    role: "Mobile Software Engineer · Prunedge",
     description:
-      "A mobile electronic document management system (EDMS) that automates business processes and workflows for organizations. I worked on building the app using React Native and JavaScript, implementing features such as document capture and scanning, including an implementation for signing documents, document storage and retrieval, workflow automation, collaboration and sharing, and security and compliance. I also managed deployment to both the Apple App Store and Google Play Store.",
+      "Built a mobile document management app with capture and scanning, e-signatures, storage and retrieval, workflow automation, and collaboration tools.",
+    outcome:
+      "Shipped an enterprise document management system used by organizations.",
+    linksNote: "No public app store links are listed for this project.",
     technologies: ["React Native", "JavaScript"],
   },
   {
     id: "splash-fm-radio",
     name: "Splash FM Radio",
     year: "2020",
+    role: "Mobile Engineer",
     description:
-      "A mobile application for streaming Splash FM Radio, a popular radio station in Ibadan, Nigeria. I worked on building the app using React Native and JavaScript, implementing features such as live radio streaming, program schedule, song requests, social media integration, polls, and push notifications. I also built the Lagelu FM Radio app, which is a sister radio station to Splash FM Radio and broadcasted in Abeokuta, and managed deployment to both the Apple App Store and Google Play Store.",
+      "Built mobile apps for Splash FM and Lagelu FM, with live radio, programme schedules, song requests, polls, and push notifications.",
+    linksNote: "No public app store links are listed for these apps.",
     technologies: ["React Native", "JavaScript"],
   },
   {
     id: "maudition",
     name: "mAudition",
     year: "2020",
-    description: "",
+    role: "Software Engineer · Workforce Group",
+    description:
+      "Re-architected and redeployed a video audition app using React Native and Redux.",
+    outcome:
+      "Improved app performance by over 70% and raised user experience scores.",
+    linksNote: "No public app store links are listed for this project.",
     technologies: [
       "React Native",
       "JavaScript",
@@ -250,21 +291,31 @@ export const projects: Project[] = [
     id: "learnry",
     name: "Learnry LMS",
     year: "2020",
-    description: "",
+    role: "Software Engineer · Workforce Group",
+    description:
+      "Built a mobile learning app with engagement features such as streaks and progress tracking.",
+    outcome: "Improved learning session completion rates.",
+    linksNote: "No public app store links are listed for this project.",
     technologies: ["React Native", "JavaScript", "Expo"],
   },
   {
     id: "kto-home",
     name: "Knowledge To Own",
     year: "2019",
-    description: "",
+    role: "Full-stack Software Engineer · Startup Builder",
+    description:
+      "Built a web platform with React and Node.js to connect prospective home buyers with affordable resources.",
+    linksNote: "No public project link is listed.",
     technologies: ["React", "JavaScript", "Node.js", "Express", "MongoDB"],
   },
   {
     id: "otto-travel",
     name: "Otto Travel",
     year: "2019",
-    description: "",
+    role: "Full-stack Software Engineer · Startup Builder",
+    description:
+      "Built a React Native travel app and owned booking workflows from design handoff through app store release.",
+    linksNote: "No public app store links are listed for this project.",
     technologies: ["React Native", "JavaScript", "Expo", "GraphQL"],
   },
 ];

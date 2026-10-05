@@ -8,15 +8,18 @@ export const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav>
+    <nav aria-label="Primary navigation">
       <div className="bg-background px-8 py-5 flex flex-row items-center justify-between">
-        <Image
-          src={"/images/headshot.jpeg"}
-          alt="Headshot of Chii"
-          className="rounded-full"
-          width={40}
-          height={40}
-        />
+        <Link prefetch href="/">
+          <Image
+            src={"/images/headshot.jpeg"}
+            alt="Headshot of Chii"
+            className="rounded-full"
+            width={40}
+            height={40}
+          />
+        </Link>
+
         <div className="flex flex-row items-center justify-center gap-5">
           <Link
             prefetch
@@ -37,6 +40,16 @@ export const Nav = () => {
             }`}
           >
             Projects
+          </Link>
+          <Link
+            prefetch
+            href="/writing"
+            aria-current={pathname === "/writing" ? "page" : undefined}
+            className={`text-sm ${
+              pathname === "/writing" ? "font-medium" : "font-normal opacity-75"
+            }`}
+          >
+            Writing
           </Link>
         </div>
         {/* <div className="w-[40px]" /> */}

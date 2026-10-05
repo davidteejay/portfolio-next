@@ -1,87 +1,102 @@
 import Image from "next/image";
-import { Github, Linkedin, Mail } from "@geist-ui/icons";
+import Link from "next/link";
+import { FiGithub, FiLinkedin, FiMail, FiArrowUpRight } from "react-icons/fi";
 import { FaMedium, FaStackOverflow, FaXTwitter } from "react-icons/fa6";
 import { ADPListIcon } from "@/assets/icons/ADPList";
 
-const iconSize = 24;
+const iconSize = 20;
+
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/chibuokem-onyekwelu",
+    icon: <FiLinkedin size={iconSize} />,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/davidteejay",
+    icon: <FiGithub size={iconSize} />,
+  },
+  {
+    label: "ADPList mentoring",
+    href: "https://adplist.org/mentors/chibuokem-onyekwelu",
+    icon: <ADPListIcon size={iconSize} />,
+  },
+  {
+    label: "X",
+    href: "https://x.com/lord_chii",
+    icon: <FaXTwitter size={iconSize} />,
+  },
+  {
+    label: "Medium",
+    href: "https://medium.com/@chibuokem",
+    icon: <FaMedium size={iconSize} />,
+  },
+  {
+    label: "Stack Overflow",
+    href: "https://stackoverflow.com/users/10407415/chibuokem-onyekwelu",
+    icon: <FaStackOverflow size={iconSize} />,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="main-container flex flex-1 flex-col items-center justify-center h-full w-full p-6 bg-background">
-      <div className="w-[100px] h-[100px] sm:w-[200px] sm:h-[200px] border border-gray-100 dark:border-gray-700 rounded-full overflow-hidden p-2">
-        <div className="w-full h-full relative">
+    <main className="home-page" id="main-content">
+      <section className="home-hero" aria-labelledby="home-title">
+        <div className="hero-copy">
+          <p className="eyebrow">
+            Senior / Lead Mobile Engineer · React Native
+          </p>
+          <h1 id="home-title">
+            I lead teams building reliable React Native apps.
+          </h1>
+          <p className="hero-summary">
+            I&apos;m Chibuokem, a Senior / Lead Mobile Engineer specializing in
+            React Native and TypeScript. I bring technical direction and
+            hands-on ownership across product development, native integrations,
+            and release delivery, with experience in fintech, health, education,
+            and transport.
+          </p>
+          <div className="hero-actions">
+            <Link className="button button-primary" href="/projects">
+              Explore selected work <FiArrowUpRight size={18} />
+            </Link>
+            <a className="button button-secondary" href="/resume.pdf" download>
+              Download resume <FiArrowUpRight size={18} />
+            </a>
+            <a
+              className="button button-secondary"
+              href="mailto:hello@chibuokem.dev"
+            >
+              <FiMail size={18} /> Contact me
+            </a>
+          </div>
+          <div className="social-links" aria-label="More ways to connect">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.label}
+                title={link.label}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="hero-photo-wrap">
           <Image
-            src={"/images/headshot.jpeg"}
-            alt="Headshot of Chii"
+            src="/images/headshot.jpeg"
+            alt="Chibuokem Onyekwelu"
             fill
-            className="rounded-full"
+            priority
+            sizes="(max-width: 720px) 180px, 280px"
+            className="hero-photo"
           />
         </div>
-      </div>
-      <h1 className="text-2xl text-center sm:text-5xl font-semibold mt-10 mb-5">
-        Chibuokem T. Onyekwelu
-      </h1>
-      {/* <h5 className="text-lg text-center sm:text-xl font-light my-4">
-        Software Engineer (React, React Native, TypeScript, Next.js)
-      </h5> */}
-      <p className="font-light text-sm w-full max-w-[700px]">
-        I&apos;m a Software Engineer, with 6+ years of experience in building
-        applications, primarily using React Native and TypeScript/JavaScript. I
-        have worked on, and deployed, more than ten applications to both the
-        Apple App Store and Google Play Store, serving more than a hundred
-        thousand users.
-      </p>
-      <div className="flex flex-row items-center justify-center gap-7 flex-wrap mt-10">
-        <a
-          href="mailto:hello@chibuokem.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Mail size={iconSize} />
-        </a>
-        <a
-          href="https://linkedin.com/in/chibuokem-onyekwelu"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Linkedin size={iconSize} />
-        </a>
-        <a
-          href="https://github.com/davidteejay"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Github size={iconSize} />
-        </a>
-        <a
-          href="https://adplist.org/mentors/chibuokem-onyekwelu"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ADPListIcon size={iconSize} />
-        </a>
-        <a
-          href="https://x.com/lord_chii"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaXTwitter size={iconSize} />
-        </a>
-        <a
-          href="https://medium.com/@chibuokem"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaMedium size={iconSize} />
-        </a>
-        <a
-          href="https://stackoverflow.com/users/10407415/chibuokem-onyekwelu"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaStackOverflow size={iconSize} />
-        </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
