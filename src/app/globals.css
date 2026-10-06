@@ -10,7 +10,7 @@
   --color-main-background: var(--main-background);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-matter);
 }
 
 * {
@@ -42,7 +42,7 @@
 body {
   background: var(--main-background);
   color: var(--foreground);
-  font-family: Inter, sans-serif;
+  font-family: var(--font-matter), sans-serif;
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -94,7 +94,7 @@ body {
 .writing-page-header h1 {
   margin: 0;
   font-size: clamp(2.5rem, 5.5vw, 4rem);
-  font-weight: 640;
+  font-weight: 600;
   letter-spacing: -0.06em;
   line-height: 1.02;
 }
@@ -121,7 +121,7 @@ body {
 .writing-page .writing-card h2 {
   margin: 17px 0 0;
   font-size: 1.15rem;
-  font-weight: 620;
+  font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.4;
 }
@@ -143,7 +143,7 @@ body {
   gap: 8px;
   color: #285b49;
   font-size: 0.88rem;
-  font-weight: 620;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -185,13 +185,13 @@ body {
 
 .writing-meta span:first-child {
   color: #285b49;
-  font-weight: 620;
+  font-weight: 600;
 }
 
 .writing-card h3 {
   margin: 17px 0 0;
   font-size: 1.15rem;
-  font-weight: 620;
+  font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.4;
 }
@@ -220,7 +220,7 @@ body {
 .writing-read-link span {
   color: color-mix(in srgb, var(--foreground) 60%, transparent);
   font-size: 0.78rem;
-  font-weight: 450;
+  font-weight: 400;
 }
 
 .hero-copy {
@@ -231,7 +231,7 @@ body {
   margin: 0 0 18px;
   color: #39715f;
   font-size: 0.78rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.1em;
   line-height: 1.5;
   text-transform: uppercase;
@@ -241,7 +241,7 @@ body {
   max-width: 720px;
   margin: 0;
   font-size: clamp(2.7rem, 6.4vw, 5.4rem);
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: -0.065em;
   line-height: 0.99;
 }
@@ -271,7 +271,7 @@ body {
   border-radius: 999px;
   padding: 0 19px;
   font-size: 0.9rem;
-  font-weight: 550;
+  font-weight: 500;
   text-decoration: none;
   transition: transform 160ms ease, background-color 160ms ease;
 }
@@ -368,7 +368,7 @@ body {
 .projects-header h1 {
   margin: 0;
   font-size: clamp(2.4rem, 5vw, 3.6rem);
-  font-weight: 640;
+  font-weight: 600;
   letter-spacing: -0.06em;
 }
 
@@ -390,7 +390,7 @@ body {
 .project-section-heading h2 {
   margin: 0;
   font-size: 1.4rem;
-  font-weight: 610;
+  font-weight: 600;
   letter-spacing: -0.035em;
 }
 
@@ -427,7 +427,7 @@ body {
 .project-card-header h3 {
   margin: 0;
   font-size: 1.12rem;
-  font-weight: 620;
+  font-weight: 600;
   letter-spacing: -0.025em;
 }
 
@@ -442,7 +442,7 @@ body {
   margin: 6px 0 0;
   color: #39715f;
   font-size: 0.82rem;
-  font-weight: 550;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -456,7 +456,7 @@ body {
 
 .project-outcome strong {
   color: var(--foreground);
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .project-technologies {
@@ -505,7 +505,7 @@ body {
   margin-top: 16px;
   color: #285b49;
   font-size: 0.88rem;
-  font-weight: 620;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -544,7 +544,7 @@ body {
 .case-study-hero h1 {
   margin: 0;
   font-size: clamp(2.8rem, 6vw, 5rem);
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.065em;
   line-height: 1;
 }
@@ -601,7 +601,7 @@ body {
 }
 
 .case-study-draft-note strong {
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .case-study-draft-note p span {
@@ -627,7 +627,7 @@ body {
 .case-study-toc > p {
   margin: 0 0 5px;
   font-size: 0.82rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .case-study-toc a {
@@ -645,7 +645,7 @@ body {
   margin-right: 5px;
   color: #39715f;
   font-size: 0.7rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .case-study-sections {
@@ -665,7 +665,7 @@ body {
   padding-top: 5px;
   color: #39715f;
   font-size: 0.78rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .case-study-section h2 {
@@ -710,7 +710,7 @@ body {
   gap: 20px;
   cursor: pointer;
   font-size: 1.1rem;
-  font-weight: 620;
+  font-weight: 600;
   list-style-position: inside;
 }
 
@@ -723,7 +723,7 @@ body {
   padding: 9px 13px;
   color: color-mix(in srgb, var(--foreground) 74%, transparent);
   font-size: 0.8rem;
-  font-weight: 550;
+  font-weight: 500;
 }
 
 .additional-project-action svg {
@@ -748,7 +748,7 @@ body {
 
 .impact-item strong {
   font-size: clamp(1.35rem, 2.7vw, 2rem);
-  font-weight: 620;
+  font-weight: 600;
   letter-spacing: -0.04em;
 }
 
@@ -774,7 +774,7 @@ body {
 .principle-number {
   color: #39715f;
   font-size: 0.78rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .principle-card h3 {

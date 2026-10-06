@@ -1,8 +1,32 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Nav } from "@/components/Nav";
 import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
+
+const matter = localFont({
+  src: [
+    {
+      path: "./fonts/Matter/Matter-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Matter/Matter-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Matter/Matter-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    { path: "./fonts/Matter/Matter-Bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-matter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chibuokem.dev"),
@@ -56,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={matter.variable}>
       <body>
         <div className="site-shell">
           <a className="skip-link" href="#main-content">
