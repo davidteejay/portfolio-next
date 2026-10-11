@@ -47,7 +47,12 @@ function ProjectCard({ project }: { project: ProjectItem }) {
   return (
     <article className="project-card">
       <header className="project-card-header">
-        <h3>{project.name}</h3>
+        <div className="project-card-title-group">
+          <h3>{project.name}</h3>
+          {project.caseStudy?.status === "draft" && (
+            <span className="case-study-status">Case study in draft</span>
+          )}
+        </div>
         <span className="project-period">{project.year}</span>
       </header>
       <p className="project-role">{project.role}</p>
@@ -84,7 +89,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
           {project.linksNote ?? "No public project link is listed."}
         </p>
       )}
-      {project.caseStudy && (
+      {project.caseStudy?.status === "published" && (
         <Link
           className="case-study-project-link"
           href={`/projects/${project.id}`}

@@ -44,14 +44,14 @@ export const metadata: Metadata = {
     title: "Chibuokem Onyekwelu | Senior React Native Engineer",
     description:
       "Senior / Lead React Native engineer building and shipping mobile products for iOS and Android with TypeScript.",
-    images: ["/opengraph-image"],
+    images: ["/images/chibuokem-portrait.jpeg"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Chibuokem Onyekwelu | Senior React Native Engineer",
     description:
       "Senior / Lead React Native engineer building and shipping mobile products for iOS and Android with TypeScript.",
-    images: ["/opengraph-image"],
+    images: ["/images/chibuokem-portrait.jpeg"],
   },
   keywords: [
     "Chibuokem",
@@ -69,7 +69,11 @@ export const metadata: Metadata = {
   ],
   creator: "Chibuokem Onyekwelu",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
     apple: "/apple-touch-icon.png",
   },
 };

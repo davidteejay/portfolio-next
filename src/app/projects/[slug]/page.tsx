@@ -48,7 +48,7 @@ const caseStudySections = [
 ];
 
 const caseStudyProjects = projects
-  .filter((project) => project.caseStudy)
+  .filter((project) => project.caseStudy?.status === "published")
   .sort((a, b) => a.caseStudy!.order - b.caseStudy!.order);
 
 export function generateStaticParams() {

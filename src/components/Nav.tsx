@@ -3,16 +3,17 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Nav = () => {
   const pathname = usePathname();
 
   return (
     <nav aria-label="Primary navigation">
-      <div className="bg-background px-8 py-5 flex flex-row items-center justify-between">
+      <div className="site-nav-inner bg-background">
         <Link prefetch href="/">
           <Image
-            src={"/images/headshot.jpeg"}
+            src="/images/chibuokem-portrait.jpeg"
             alt="Headshot of Chii"
             className="rounded-full"
             width={40}
@@ -20,7 +21,7 @@ export const Nav = () => {
           />
         </Link>
 
-        <div className="flex flex-row items-center justify-center gap-5">
+        <div className="site-nav-links">
           <Link
             prefetch
             href="/"
@@ -51,8 +52,8 @@ export const Nav = () => {
           >
             Writing
           </Link>
+          <ThemeToggle />
         </div>
-        {/* <div className="w-[40px]" /> */}
       </div>
     </nav>
   );

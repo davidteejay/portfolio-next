@@ -6,7 +6,7 @@ type Project = {
   outcome?: string;
   year: string;
   linksNote?: string;
-  caseStudy?: { order: number };
+  caseStudy?: { order: number; status: "draft" | "published" };
   links?: { label: string; url: string }[];
   technologies: string[];
 };
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     outcome:
       "Improved launch performance by 50% and reduced technical debt by 60% on an app serving 120,000+ users.",
     year: "Oct 2025 – Present",
-    caseStudy: { order: 2 },
+    caseStudy: { order: 2, status: "draft" },
     links: [
       {
         label: "App Store",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     outcome:
       "Increased monthly active users by 46% through experimentation and product improvements, and reduced deployment time by 25%.",
     year: "May 2022 – Feb 2025",
-    caseStudy: { order: 1 },
+    caseStudy: { order: 1, status: "draft" },
     links: [
       {
         label: "App Store",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
       "Built a blood pressure tracking app with measurement schedules, reminders, health data syncing, and sharing for family and caregivers. Added Bluetooth monitor support through native iOS and Android modules, plus English and Arabic localization.",
     role: "React Native Engineer",
     year: "2024 – 2025",
-    caseStudy: { order: 5 },
+    caseStudy: { order: 5, status: "draft" },
     links: [
       {
         label: "App Store",
@@ -125,7 +125,7 @@ export const projects: Project[] = [
       "Improved app performance by over 50%, brought crash-free sessions close to 100%, and achieved over 90% test coverage for critical financial functionality.",
     year: "Jul 2025 – Oct 2025",
     linksNote: "Public store links are not listed for this project.",
-    caseStudy: { order: 4 },
+    caseStudy: { order: 4, status: "draft" },
     technologies: [
       "React Native",
       "TypeScript",
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     outcome:
       "Owned mobile delivery and maintained a 99% crash-free experience while improving type safety and release automation.",
     year: "2022; Mar 2025 – present",
-    caseStudy: { order: 3 },
+    caseStudy: { order: 3, status: "draft" },
     links: [
       {
         label: "App Store",

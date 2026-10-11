@@ -88,7 +88,7 @@ export default function Home() {
         </div>
         <div className="hero-photo-wrap">
           <Image
-            src="/images/headshot.jpeg"
+            src="/images/chibuokem-portrait.jpeg"
             alt="Chibuokem Onyekwelu"
             fill
             priority
